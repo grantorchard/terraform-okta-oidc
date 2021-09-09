@@ -47,7 +47,7 @@ resource "okta_auth_server_claim" "this" {
 	for_each = { for claim in var.groups_claim: claim.value => claim }
 
 	auth_server_id    = okta_auth_server.this.id
-	name              = "${each.value.value}_members"
+	name              = "groups" # changing this value changes the name of the "groups" key on the issued token
 	group_filter_type = upper(each.value.filter_type)
 	value_type        = "GROUPS"
 	value             = each.value.value
