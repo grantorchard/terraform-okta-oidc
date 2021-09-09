@@ -1,10 +1,3 @@
-provider "okta" {
-  #api_token = "00G6YpUE8G4cAEUbzN4zxH8lxnkIhMJCK7lZTrb9e8"
-  org_name  = "hashicorp-go"
-  base_url  = "okta.com"
-  api_token = "00G6YpUE8G4cAEUbzN4zxH8lxnkIhMJCK7lZTrb9e8"
-}
-
 ## Import OIDC module
 module "okta_oidc" {
   source = "../../../terraform-okta-oidc"
